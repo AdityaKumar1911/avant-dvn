@@ -1,4 +1,5 @@
 import React from "react";
+import Bannerimg from "../../Assets/images/Avant Devine8988.jpg";
 
 const Banner = () => {
   return (
@@ -6,7 +7,7 @@ const Banner = () => {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="https://huemn.in/cdn/shop/files/handy.banner.returns_1296x.jpg?v=1724330901"
+          src={Bannerimg}
           alt="Red textured background with artisan craft"
           className="object-cover w-full h-full"
         />
@@ -15,7 +16,7 @@ const Banner = () => {
       {/* Content Overlay */}
       <div className="relative h-full flex flex-col items-center justify-center px-4 text-center">
         <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-serif max-w-2xl mb-6">
-          Imagined by Designers. Handcrafted by Artisans.
+          Wave Co ord
         </h1>
         <a
           href="/product-page"

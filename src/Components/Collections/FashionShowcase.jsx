@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Assuming you are using react-router for navigation
-import Img1 from "../../Assets/images/Avant Devine8876.jpg"; // Image 1
-import Img2 from "../../Assets/images/Avant Devine8828.jpg"; // Image 2
+import Img1 from "../../Assets/images/Avant Devine8310.jpg"; // Image 1
+import Img2 from "../../Assets/images/Avant Devine8535.jpg"; // Image 2
 
 export default function FashionShowcase() {
   return (
     <div className="min-h-screen bg-gray-50">
       <main className="container mx-auto px-4 py-12 md:py-20">
         {/* Header */}
-        <h1 className="text-4xl md:text-6xl font-bold text-center mb-12">
-          AVANT Collections
-        </h1>
+        {/* <h1 className="text-4xl md:text-6xl font-bold text-center mb-12">
+          Avant Collections
+        </h1> */}
 
         {/* Fashion Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -26,7 +26,7 @@ export default function FashionShowcase() {
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white transform transition-transform duration-300 group-hover:translate-y-2">
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
-                AVANT Blue
+                Rose Noir Tee Shirt
               </h2>
               <p className="text-gray-200 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 Avant-garde designs featuring bold blue hues and artistic
@@ -53,7 +53,7 @@ export default function FashionShowcase() {
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white transform transition-transform duration-300 group-hover:translate-y-2">
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
-                AVANT Diversity
+                Chrome Pulse Jeans
               </h2>
               <p className="text-gray-200 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 Contemporary streetwear blending comfort with artistic

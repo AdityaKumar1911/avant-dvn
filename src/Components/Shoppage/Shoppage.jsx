@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; // If you're using React Router
-import Img from "../../Assets/images/Avant Devine8757.jpg";
+import Img from "../../Assets/images/Avant Devine8797.jpg";
 
 export default function WinterCollection() {
   return (
@@ -19,7 +19,7 @@ export default function WinterCollection() {
         <div className="px-6 py-12 md:p-16 lg:p-24 flex flex-col justify-center">
           <div className="max-w-xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif tracking-wide mb-8">
-              CLASSIC WINTER COLLECTION
+              Faded Echo
             </h1>
 
             <p className="text-gray-600 text-lg leading-relaxed mb-12">
