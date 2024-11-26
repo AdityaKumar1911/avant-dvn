@@ -1,0 +1,36 @@
+.sliding-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffd700; 
+}
+
+.sliding-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slide 10s linear infinite;
+  font-family: "Arial", sans-serif;
+  font-size: 1.2rem;
+  color: #000; 
+  padding: 15px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .sliding-text {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .sliding-text {
+    font-size: 0.9rem;
+  }
+}

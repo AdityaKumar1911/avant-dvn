@@ -1,0 +1,82 @@
+.footer {
+    background-color: #000;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+}
+
+.footer-title {
+    color: #fff;
+    font-size: 17px;
+    font-family: "Futura Regular", sans-serif;
+    margin-bottom: 35px;
+}
+.footer-text {
+    color: #fff;
+    font-size: 17px;
+    font-family: "Futura Regular", sans-serif;
+}
+
+.first-column {
+    margin-bottom: 20px;
+}
+
+.first-column h5 {
+    margin-bottom: 15px;
+    font-family: "Futura Regular", sans-serif;
+    font-weight: bold;
+}
+
+.first-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.first-column ul li {
+    margin-bottom: 25px;
+}
+
+.first-column ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.first-column ul li a:hover {
+    text-decoration: underline;
+    color: grey;
+    text-decoration: none;
+}
+
+
+.centered-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.centered-image {
+    max-width: 100%;
+    margin-right: 42px;
+    height: auto;
+}
+
+
+@media only screen and (max-width: 625px) {
+    .footer {
+        background-color: #000;
+        padding-top: 35px;
+        padding-left: 10px;
+    }
+
+    .first-column ul li {
+        margin-bottom: 15px;
+    }
+
+    .centered-image {
+   margin-bottom: 15px;
+   margin-top: 15px;
+    }
+    
+}
