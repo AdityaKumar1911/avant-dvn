@@ -3,7 +3,7 @@ import Bannerimg from "../../Assets/images/Avant Devine8988.jpg";
 
 const Banner = () => {
   return (
-    <section className="relative w-full h-full min-h-[600px] max-h-[900px] overflow-hidden">
+    <section className="relative w-full h-[50vh] min-h-[400px] max-h-[600px] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
