@@ -61,7 +61,10 @@ const NewArrivals = () => {
   const displayedProducts = products.slice(currentIndex, currentIndex + 4);
 
   return (
-    <section className="container mx-auto px-4 py-12">
+    <section
+      className="container mx-auto px-4 py-12"
+      style={{ overflow: "hidden" }}
+    >
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-2xl md:text-3xl font-serif">OUR NEW ARRIVALS</h2>
         <Link
