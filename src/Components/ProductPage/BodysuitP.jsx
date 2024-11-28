@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 import { useCart } from "../CartContext/CartContext"; // Adjust path as needed
 import { Link } from "react-router-dom";
-import ProductImg1 from "../../Assets/images/Avant Devine8325.jpg";
-import ProductImg2 from "../../Assets/images/Avant Devine8196.jpg";
-import ProductImg3 from "../../Assets/images/Avant Devine8240 edit.jpg";
-import ProductImg4 from "../../Assets/images/Avant Devine8310.jpg";
+import ProductImg1 from "../../Assets/images/Avant Devine7960.jpg";
+import ProductImg2 from "../../Assets/images/Avant Devine7996 edit.jpg";
+import ProductImg3 from "../../Assets/images/Avant Devine8026.jpg";
+import ProductImg4 from "../../Assets/images/Avant Devine8161.jpg";
 
 export default function ProductPage() {
   const [selectedSize, setSelectedSize] = useState("");
@@ -50,11 +50,11 @@ export default function ProductPage() {
     }
     const item = {
       id: `${selectedColor}-${selectedSize}`,
-      name: "Medusa T-Shirt",
+      name: "Scarlet Seduction Bodysuit",
       color: selectedColor,
       size: selectedSize,
       quantity: quantity,
-      price: 19.5,
+      price: 4700, // Price in INR
     };
     addToCart(item);
     alert("Your item has been successfully added to the cart!");
@@ -67,6 +67,9 @@ export default function ProductPage() {
     }
     // Add your "buy now" logic here (e.g., redirect to checkout or initiate the purchase)
   };
+
+  // Calculate the total price in INR (₹4700 per item)
+  const priceInINR = 4700 * quantity;
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -101,10 +104,10 @@ export default function ProductPage() {
       {/* Product Details */}
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-medium">Medusa T-Shirt</h1>
+          <h1 className="text-2xl font-medium">Scarlet Seduction Bodysuit</h1>
           <p className="mt-2 text-gray-600">
-            Reimagine the feeling of a classic T-shirt. With our cotton
-            T-shirts, everyday essentials no longer have to be ordinary.
+            Unlock confidence with our Scarlet Seduction Bodysuit, a
+            ribbed-fabric masterpiece crafted for timeless allure.
           </p>
         </div>
 
@@ -170,7 +173,8 @@ export default function ProductPage() {
 
         {/* Price and Action Buttons */}
         <div className="space-y-4">
-          <p className="text-xl">€{(19.5 * quantity).toFixed(2)}</p>
+          <p className="text-xl">₹{priceInINR.toLocaleString()}</p>{" "}
+          {/* Display price in INR */}
           <button
             onClick={handleAddToCart}
             className="w-full bg-[#14161A] text-white py-3 px-4 hover:bg-black transition-colors"
@@ -178,7 +182,6 @@ export default function ProductPage() {
           >
             ADD TO CART
           </button>
-
           <Link to="/checkoutpage">
             <button
               className="w-full bg-red-600 text-white py-3 px-4 hover:bg-red-700  transition-colors"
@@ -235,7 +238,7 @@ export default function ProductPage() {
             ) : (
               <div className="text-sm text-gray-600">
                 <p>
-                  Free shipping on orders over €50. Returns accepted within 14
+                  Free shipping on orders over ₹4500. Returns accepted within 14
                   days of delivery.
                 </p>
               </div>

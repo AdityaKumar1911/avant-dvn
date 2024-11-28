@@ -5,8 +5,9 @@ const SlidingText = () => {
   return (
     <div className="sliding-container">
       <div className="sliding-text">
-        - Lay's x Avant - It's more than just a snack - Lay's x Avant - It's
-        more than just a snack - Lay's x Avant- It's more than just a snack -
+        Redefine your style with 50% OFF on bold, premium fashion! Don't miss
+        this chance to own wearable masterpieces at half price. Shop now and
+        make every outfit a statement!
       </div>
     </div>
   );

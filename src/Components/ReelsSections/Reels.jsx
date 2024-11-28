@@ -56,7 +56,9 @@ export default function ReelsSection() {
   return (
     <section className="bg-gray-100 py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Trending Reels</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center">
+          Divine Spotlight
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {reels.map((reel) => (
             <div
@@ -84,7 +86,7 @@ export default function ReelsSection() {
                   <PlayIcon className="w-16 h-16 text-white opacity-80" />
                 </div> */}
               </div>
-              <div className="p-4">
+              {/* <div className="p-4">
                 <h3 className="font-semibold text-lg mb-2">{reel.title}</h3>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
@@ -103,7 +105,7 @@ export default function ReelsSection() {
                     {reel.views} views
                   </span>
                 </div>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

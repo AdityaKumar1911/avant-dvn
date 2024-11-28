@@ -19,21 +19,23 @@ export default function WinterCollection() {
         <div className="px-6 py-12 md:p-16 lg:p-24 flex flex-col justify-center">
           <div className="max-w-xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif tracking-wide mb-8">
-              Faded Echo
+              Faded Echo Tee
             </h1>
 
             <p className="text-gray-600 text-lg leading-relaxed mb-12">
-              Dignissim lacus, turpis ut suspendisse vel tellus. Turpis purus,
-              gravida orci, fringilla a. Ac sed eu fringilla odio mi. Consequat
-              pharetra at magna imperdiet cursus ac faucibus sit libero.
-              Ultricies quam nunc, lorem sit lorem urna, pretium aliquam ut. In
-              vel, quis donec dolor id in. Pulvinar commodo mollis diam sed
-              facilisis at cursus imperdiet cursus ac faucibus sit faucibus sit
-              libero.
+              The Faded Echo Tee is where minimalism meets character, with
+              ultra-soft cotton fabric and a faded print that adds depth and
+              intrigue. This classic crew-neck tee offers effortless comfort and
+              a touch of artistic expression, perfect for pairing with denim,
+              joggers, or layering under a jacket. Its vintage appeal combined
+              with modern versatility makes it a go-to piece for any occasion,
+              whether you're hitting the town or keeping it low-key. A creation
+              meticulously crafted by the artisans of Avant Divine, this tee is
+              a bold, wearable statement of individuality.
             </p>
 
             <Link
-              to="/shop"
+              to="/fadedecho"
               className="inline-block bg-black text-white px-8 py-4 text-sm tracking-wider hover:bg-gray-900 transition-colors"
             >
               SHOP COLLECTION

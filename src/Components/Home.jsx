@@ -22,7 +22,7 @@ const Home = () => {
       <ShopPageb />
       <OurNewArivals />
       <Reels />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

@@ -8,17 +8,21 @@ import Bodysuit from "./Components/ProducCollactions/Bodysuit";
 import VideoBanner from "./Components/VideoBanner/VideoBanner";
 import CheckoutPage from "./Components/Checkout/Checkout";
 import BuyNowPage from "./Components/Checkout/BuyNow";
+import BodysuitP from "./Components/ProductPage/BodysuitP";
+import RoseNoir from "./Components/ProductPage/RoseNoir";
+import Chromepulsejeans from "./Components/ProductPage/Chromepulsejeans";
+import Wave from "./Components/ProductPage/WaveCoord";
+import Fadedecho from "./Components/ProductPage/FadedEcho";
+import Footer from "./Components/Footer/footer"; // Corrected import
+import SuccessfulPayment from "./Components/SuccessfulPayment/SuccessfulPayment";
 
 function App() {
   return (
     <CartProvider>
-      {" "}
-      {/* Wrap everything that needs context access */}
       <Router>
         <div>
           <Navbar />
           <Routes>
-            {/* Define your routes here */}
             <Route path="/" element={<Home />} />
             <Route path="/collections" element={<CollectionsSection />} />
             <Route path="/product-page" element={<ProductPage />} />
@@ -26,7 +30,14 @@ function App() {
             <Route path="/videobanner" element={<VideoBanner />} />
             <Route path="/checkoutpage" element={<CheckoutPage />} />
             <Route path="/buynow" element={<BuyNowPage />} />
+            <Route path="/bodysuitp" element={<BodysuitP />} />
+            <Route path="/rosenoir" element={<RoseNoir />} />
+            <Route path="/chromepulsejeans" element={<Chromepulsejeans />} />
+            <Route path="/wave" element={<Wave />} />
+            <Route path="/fadedecho" element={<Fadedecho />} />
+            <Route path="/successfulpayment" element={<SuccessfulPayment />} />
           </Routes>
+          <Footer /> {/* This will appear on all pages */}
         </div>
       </Router>
     </CartProvider>
