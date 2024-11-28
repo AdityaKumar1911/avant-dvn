@@ -22,7 +22,10 @@ export default function WinterCollection() {
               Faded Echo Tee
             </h1>
 
-            <p className="text-gray-600 text-lg leading-relaxed mb-12">
+            <p
+              className="text-gray-600 text-lg leading-relaxed mb-12"
+              style={{ textAlign: "justify" }}
+            >
               The Faded Echo Tee is where minimalism meets character, with
               ultra-soft cotton fabric and a faded print that adds depth and
               intrigue. This classic crew-neck tee offers effortless comfort and
