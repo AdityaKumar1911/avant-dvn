@@ -3,6 +3,7 @@ import { Menu, X, ShoppingBag, User } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../CartContext/CartContext"; // Adjust path as needed
 import Logo from "../../Assets/Logos/Avant Divine Website logo.png";
+import "./Navbar.css";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -88,7 +89,7 @@ export default function Navbar() {
           </div>
 
           {/* Right - Call Us, Cart, User */}
-          <div className="flex items-center gap-4">
+          <div className=" gapcont flex  items-center gap-4">
             <button className="hidden md:block hover:text-gray-600 transition-colors">
               Call Us
             </button>
