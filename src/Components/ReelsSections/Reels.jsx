@@ -54,8 +54,8 @@ export default function ReelsSection() {
   ];
 
   return (
-    <section className="bg-gray-100 py-12">
-      <div className="container mx-auto px-4">
+    <section className="bg-gray-100 py-12 w-full">
+      <div className="container mx-auto px-4 w-full">
         <h2 className="text-3xl font-bold mb-8 text-center">
           Divine Spotlight
         </h2>
@@ -63,9 +63,9 @@ export default function ReelsSection() {
           {reels.map((reel) => (
             <div
               key={reel.id}
-              className="bg-white rounded-lg overflow-hidden shadow-md"
+              className="bg-white rounded-lg overflow-hidden shadow-md w-full"
             >
-              <div className="relative aspect-[9/16]">
+              <div className="relative aspect-[9/16] w-full">
                 {reel.isVideo ? (
                   <video
                     src={reel.thumbnail}
@@ -82,10 +82,12 @@ export default function ReelsSection() {
                     className="object-cover w-full h-full"
                   />
                 )}
+                {/* Optionally, you can add a play icon overlay */}
                 {/* <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
                   <PlayIcon className="w-16 h-16 text-white opacity-80" />
                 </div> */}
               </div>
+              {/* Optional description section */}
               {/* <div className="p-4">
                 <h3 className="font-semibold text-lg mb-2">{reel.title}</h3>
                 <div className="flex items-center justify-between">
