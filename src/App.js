@@ -16,6 +16,9 @@ import Fadedecho from "./Components/ProductPage/FadedEcho";
 import Footer from "./Components/Footer/footer"; // Corrected import
 import SuccessfulPayment from "./Components/SuccessfulPayment/SuccessfulPayment";
 import TermsAndConditions from "./Components/TermsAndConditions/TermsAndConditions";
+import PrivacyPolicy from "./Components/TermsAndConditions/PrivacyPolicy";
+import ReturnsandExchange from "./Components/TermsAndConditions/ReturnsandExchange";
+import ShippingAndDelivery from "./Components/TermsAndConditions/ShippingDelivery";
 
 function App() {
   return (
@@ -40,6 +43,15 @@ function App() {
             <Route
               path="/termsAndConditions"
               element={<TermsAndConditions />}
+            />
+            <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+            <Route
+              path="/returnsandexchange"
+              element={<ReturnsandExchange />}
+            />
+            <Route
+              path="/shippinganddelivery"
+              element={<ShippingAndDelivery />}
             />
           </Routes>
           <Footer /> {/* This will appear on all pages */}

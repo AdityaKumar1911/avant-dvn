@@ -63,26 +63,26 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/refund-policy"
+                  to="/returnsandexchange"
                   className="hover:text-gray-300 transition duration-200"
                 >
-                  Refund Policy
+                  Returns and Exchange
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/shipping-policy"
+                  to="/shippinganddelivery"
                   className="hover:text-gray-300 transition duration-200"
                 >
-                  Shipping Policy
+                  Shipping & Delivery
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/terms-of-service"
+                  to="/privacyPolicy"
                   className="hover:text-gray-300 transition duration-200"
                 >
-                  Terms of Service
+                  PrivacyPolicy
                 </Link>
               </li>
             </ul>
