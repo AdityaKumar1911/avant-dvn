@@ -55,10 +55,10 @@ function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/privacy-policy"
+                  to="/termsAndConditions"
                   className="hover:text-gray-300 transition duration-200"
                 >
-                  Privacy Policy
+                  TermsAndConditions
                 </Link>
               </li>
               <li>

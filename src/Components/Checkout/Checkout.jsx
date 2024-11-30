@@ -88,7 +88,7 @@ const CheckoutPage = () => {
       validationErrors.upiId = "UPI ID is required";
     }
 
-    setErrors(validationErrors);
+    setErrors(validationErrors); 
 
     return Object.keys(validationErrors).length === 0;
   };

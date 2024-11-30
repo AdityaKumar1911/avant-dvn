@@ -15,6 +15,7 @@ import Wave from "./Components/ProductPage/WaveCoord";
 import Fadedecho from "./Components/ProductPage/FadedEcho";
 import Footer from "./Components/Footer/footer"; // Corrected import
 import SuccessfulPayment from "./Components/SuccessfulPayment/SuccessfulPayment";
+import TermsAndConditions from "./Components/TermsAndConditions/TermsAndConditions";
 
 function App() {
   return (
@@ -36,6 +37,10 @@ function App() {
             <Route path="/wave" element={<Wave />} />
             <Route path="/fadedecho" element={<Fadedecho />} />
             <Route path="/successfulpayment" element={<SuccessfulPayment />} />
+            <Route
+              path="/termsAndConditions"
+              element={<TermsAndConditions />}
+            />
           </Routes>
           <Footer /> {/* This will appear on all pages */}
         </div>
