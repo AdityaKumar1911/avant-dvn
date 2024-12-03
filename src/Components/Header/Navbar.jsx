@@ -90,9 +90,11 @@ export default function Navbar() {
 
           {/* Right - Call Us, Cart, User */}
           <div className=" gapcont flex  items-center gap-4">
-            <button className="hidden md:block hover:text-gray-600 transition-colors">
-              Call Us
-            </button>
+            <a href="/callus">
+              <button className="hidden md:block hover:text-gray-600 transition-colors">
+                Call Us
+              </button>
+            </a>
 
             <button
               className="relative p-2 hover:bg-gray-100 rounded-lg transition-colors"

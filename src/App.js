@@ -21,6 +21,7 @@ import ReturnsandExchange from "./Components/TermsAndConditions/ReturnsandExchan
 import ShippingAndDelivery from "./Components/TermsAndConditions/ShippingDelivery";
 import SignUp from "./Components/LoginSignup/Signup";
 import Login from "./Components/LoginSignup/Login";
+import CallUs from "./Components/CallUs/CallUs";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
             />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/callus" element={<CallUs />} />
           </Routes>
           <Footer /> {/* This will appear on all pages */}
         </div>
