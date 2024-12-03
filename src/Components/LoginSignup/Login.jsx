@@ -127,7 +127,7 @@ export default function LoginPage() {
           </div>
 
           {/* Social Login */}
-          <div className="flex justify-center space-x-4">
+          {/* <div className="flex justify-center space-x-4">
             {["facebook", "twitter", "github", "google"].map((social) => (
               <button
                 key={social}
@@ -137,7 +137,7 @@ export default function LoginPage() {
                 <div className="w-5 h-5 text-gray-500" />
               </button>
             ))}
-          </div>
+          </div> */}
 
           {/* Sign Up Link */}
           <p className="text-center text-sm text-gray-600">
