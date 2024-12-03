@@ -69,7 +69,7 @@ export default function ProductPage() {
   };
 
   // Calculate the total price in INR (₹4700 per item)
-  const priceInINR = 4700 * quantity;
+  const priceInINR = 4999 * quantity;
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -105,9 +105,12 @@ export default function ProductPage() {
       <div className="space-y-6">
         <div>
           <h1 className="text-2xl font-medium">Rose Noir Tee Shirt</h1>
-          <p className="mt-2 text-gray-600">
-            Discover our Rose Noir Tee, where bold rose graphics meet soothing
-            cotton comfort for an effortless casual style.
+          <p className="mt-2 text-gray-600" style={{ textAlign: "justify" }}>
+            Elevate your everyday style with our exquisitely crafted T-shirt,
+            where comfort meets artistry. Made from luxurious French Cotton
+            Terry, this T-shirt offers a soft, breathable feel that’s perfect
+            for all-day wear. The fabric’s natural stretch and cozy texture
+            ensure a relaxed fit that moves with you.
           </p>
         </div>
 

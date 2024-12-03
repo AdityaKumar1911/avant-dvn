@@ -19,6 +19,8 @@ import TermsAndConditions from "./Components/TermsAndConditions/TermsAndConditio
 import PrivacyPolicy from "./Components/TermsAndConditions/PrivacyPolicy";
 import ReturnsandExchange from "./Components/TermsAndConditions/ReturnsandExchange";
 import ShippingAndDelivery from "./Components/TermsAndConditions/ShippingDelivery";
+import SignUp from "./Components/LoginSignup/Signup";
+import Login from "./Components/LoginSignup/Login";
 
 function App() {
   return (
@@ -53,6 +55,8 @@ function App() {
               path="/shippinganddelivery"
               element={<ShippingAndDelivery />}
             />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
           <Footer /> {/* This will appear on all pages */}
         </div>

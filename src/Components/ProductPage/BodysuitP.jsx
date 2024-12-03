@@ -105,9 +105,13 @@ export default function ProductPage() {
       <div className="space-y-6">
         <div>
           <h1 className="text-2xl font-medium">Scarlet Seduction Bodysuit</h1>
-          <p className="mt-2 text-gray-600">
-            Unlock confidence with our Scarlet Seduction Bodysuit, a
-            ribbed-fabric masterpiece crafted for timeless allure.
+          <p className="mt-2 text-gray-600" style={{ textAlign: "justify" }}>
+            Unleash your bold side with our stunning bodysuit, a perfect blend
+            of comfort and daring style. Crafted from soft, stretchy fabric,
+            this bodysuit hugs your curves while offering all-day comfort and
+            ease of movement. The sleek design is elevated by a striking,
+            statement-making print—a vivid red pair of lips that adds a touch of
+            playful attitude to your look.
           </p>
         </div>
 

@@ -54,7 +54,7 @@ export default function ProductPage() {
       color: selectedColor,
       size: selectedSize,
       quantity: quantity,
-      price: 1450, // Price in INR (₹1450)
+      price: 4499, // Price in INR (₹1450)
     };
     addToCart(item);
     alert("Your item has been successfully added to the cart!");
@@ -69,7 +69,7 @@ export default function ProductPage() {
   };
 
   // Calculate the total price in INR (₹1450 per item)
-  const priceInINR = 1450 * quantity;
+  const priceInINR = 4499 * quantity;
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -106,8 +106,10 @@ export default function ProductPage() {
         <div>
           <h1 className="text-2xl font-medium">Faded echo Tee</h1>
           <p className="mt-2 text-gray-600">
-            Rediscover the nostalgic feel with our Faded Echo Tee, where soft
-            cotton meets vintage, faded print to make a look timeless.
+            The standout feature is the striking motif of a face emblazoned on
+            the back , a statement of individuality and artistic flair.
+            Complemented by subtle branding, this T-shirt embodies the spirit of
+            Avant Divine—where fashion is a form of visual storytelling.
           </p>
         </div>
 

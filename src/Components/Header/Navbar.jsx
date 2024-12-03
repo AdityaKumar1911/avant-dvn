@@ -105,12 +105,14 @@ export default function Navbar() {
               </span>
             </button>
 
-            <button
-              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-              aria-label="User account"
-            >
-              <User className="h-6 w-6" />
-            </button>
+            <a href="/login" className="block">
+              <button
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                aria-label="User account"
+              >
+                <User className="h-6 w-6" />
+              </button>
+            </a>
           </div>
         </div>
       </nav>

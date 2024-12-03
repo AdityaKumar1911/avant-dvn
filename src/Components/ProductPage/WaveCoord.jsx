@@ -54,7 +54,7 @@ export default function ProductPage() {
       color: selectedColor,
       size: selectedSize,
       quantity: quantity,
-      price: 4700, // Price in INR (₹4700)
+      price: 11000, // Price in INR (₹4700)
     };
     addToCart(item);
     alert("Your item has been successfully added to the cart!");
@@ -69,7 +69,7 @@ export default function ProductPage() {
   };
 
   // Calculate the total price in INR (₹4700 per item)
-  const priceInINR = 4700 * quantity;
+  const priceInINR = 11000 * quantity;
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 gap-8">

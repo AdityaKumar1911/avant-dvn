@@ -16,25 +16,25 @@ const NewArrivals = () => {
     },
     {
       name: "Rose Noir Tee Shirt",
-      price: 4700.0, // Updated price
+      price: 4999.0, // Updated price
       image: Roseimg,
       link: "/rosenoir", // Add a unique link for each product
     },
     {
-      name: "COTTON OFF-WHITE SHIRT",
-      price: 4700.0, // Updated price
+      name: "Chrome Pulse Jeans",
+      price: 9500.0, // Updated price
       image: Chromepulsejeans,
       link: "/chromepulsejeans", // Add a unique link for each product
     },
     {
       name: "Wave co ord",
-      price: 4700.0, // Updated price
+      price: 11000.0, // Updated price
       image: Wave,
       link: "/wave", // Add a unique link for each product
     },
     {
       name: "Faded echo",
-      price: 4700.0, // Updated price
+      price: 4499.0, // Updated price
       image: Fadedecho,
       link: "/fadedecho", // Add a unique link for each product
     },

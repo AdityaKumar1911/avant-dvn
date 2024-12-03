@@ -54,7 +54,7 @@ export default function ProductPage() {
       color: selectedColor,
       size: selectedSize,
       quantity: quantity,
-      price: 4700, // Price in INR
+      price: 9500, // Price in INR
     };
     addToCart(item);
     alert("Your item has been successfully added to the cart!");
@@ -69,7 +69,7 @@ export default function ProductPage() {
   };
 
   // Calculate the total price in INR (₹4700 per item)
-  const priceInINR = 4700 * quantity;
+  const priceInINR = 9500 * quantity;
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -105,9 +105,16 @@ export default function ProductPage() {
       <div className="space-y-6">
         <div>
           <h1 className="text-2xl font-medium">Chrome Plus Jeans</h1>
-          <p className="mt-2 text-gray-600">
-            Set your wardrobe with our Chrome Plus Jeans, combining a sleek
-            finish with premium stretch comfort.
+          <p className="mt-2 text-gray-600" style={{ textAlign: "justify" }}>
+            Step into the spotlight with our heavy-duty denim chrome jeans, a
+            true masterpiece that redefines bold fashion. Handcrafted to
+            perfection, these jeans are not just clothing—they’re a work of art.
+            Made from premium, durable denim, they offer both strength and
+            comfort, designed to withstand the test of time. What truly sets
+            these jeans apart is the all-over silver foiling, which creates a
+            stunning, reflective effect that catches the light and turns heads.
+            The intricate embellishments add a layer of sophistication, making
+            each pair as unique as the person wearing them.
           </p>
         </div>
 

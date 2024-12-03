@@ -26,15 +26,17 @@ export default function WinterCollection() {
               className="text-gray-600 text-lg leading-relaxed mb-12"
               style={{ textAlign: "justify" }}
             >
-              The Faded Echo Tee is where minimalism meets character, with
-              ultra-soft cotton fabric and a faded print that adds depth and
-              intrigue. This classic crew-neck tee offers effortless comfort and
-              a touch of artistic expression, perfect for pairing with denim,
-              joggers, or layering under a jacket. Its vintage appeal combined
-              with modern versatility makes it a go-to piece for any occasion,
-              whether you're hitting the town or keeping it low-key. A creation
-              meticulously crafted by the artisans of Avant Divine, this tee is
-              a bold, wearable statement of individuality.
+              Discover effortless style with our relaxed fit washed dye T-shirt,
+              where modern design meets bold expression. Crafted from premium
+              fabric, this T-shirt features a unique washed dye finish that
+              gives it a soft, lived-in feel and a rich, vintage-inspired color
+              palette. The relaxed fit ensures comfort and ease, making it a
+              go-to piece for any casual day out.
+              <br />
+              The standout feature is the striking motif of a face emblazoned on
+              the back , a statement of individuality and artistic flair.
+              Complemented by subtle branding, this T-shirt embodies the spirit
+              of Avant Divine—where fashion is a form of visual storytelling.
             </p>
 
             <Link
