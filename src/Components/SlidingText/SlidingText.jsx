@@ -5,9 +5,8 @@ const SlidingText = () => {
   return (
     <div className="sliding-container">
       <div className="sliding-text">
-        Redefine your style with 50% OFF on bold, premium fashion! Don't miss
-        this chance to own wearable masterpieces at half price. Shop now and
-        make every outfit a statement!
+        Art-inspired streetwear that turns heads and breaks rules. Wear the statement!
+        For the dreamers, the creators, and the rule-breakers – Avant Divine is yours
       </div>
     </div>
   );
