@@ -27,7 +27,7 @@ export default function ProductPage() {
     ],
   };
 
-  const sizes = ["S", "M", "L", "XL"];
+  const sizes = ["XS", "S", "M", "L", "XL"];
   const colors = ["Black", "White"];
   const tabs = ["PRODUCT INFORMATION", "SHIPPING & RETURNS"];
 
