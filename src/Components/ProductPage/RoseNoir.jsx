@@ -27,7 +27,7 @@ export default function ProductPage() {
     ],
   };
 
-  const sizes = ["S", "M", "L", "XL"];
+  const sizes = ["XS", "S", "M", "L", "XL"];
   const colors = ["Black", "White"];
   const tabs = ["PRODUCT INFORMATION", "SHIPPING & RETURNS"];
 
@@ -135,7 +135,7 @@ export default function ProductPage() {
         </div>
 
         {/* Color Selection */}
-        <div>
+        {/* <div>
           <h2 className="text-sm font-medium mb-2">Select Color</h2>
           <div className="flex gap-2">
             {colors.map((color) => (
@@ -152,7 +152,7 @@ export default function ProductPage() {
               </button>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Quantity Selection */}
         <div>
