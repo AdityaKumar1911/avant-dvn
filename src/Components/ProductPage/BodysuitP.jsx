@@ -217,7 +217,7 @@ export default function ProductPage() {
             {activeTab === "PRODUCT INFORMATION" ? (
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div>
+{/*                   <div>
                     <p className="font-medium">Material</p>
                     <p className="text-gray-600">100% Cotton</p>
                   </div>
@@ -236,15 +236,15 @@ export default function ProductPage() {
                   <div>
                     <p className="font-medium">Type</p>
                     <p className="text-gray-600">T-Shirt</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ) : (
               <div className="text-sm text-gray-600">
-                <p>
+{/*                 <p>
                   Free shipping on orders over ₹4500. Returns accepted within 14
                   days of delivery.
-                </p>
+                </p> */}
               </div>
             )}
           </div>
