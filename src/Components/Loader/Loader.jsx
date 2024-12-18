@@ -30,6 +30,7 @@ export const LoaderProviderComponent = ({ children }) => {
         <section className="loader-container" {...containerProps}>
           {indicatorEl}
         </section>
+    
       )}
       {!refreshing && !loading && children}
     </LoaderContext.Provider>
