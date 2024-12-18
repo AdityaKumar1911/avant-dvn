@@ -8,9 +8,7 @@ export default function ContactForm() {
     message: "",
   });
 
-  const handleSubmit = (e) => 
-    // console.log("test")
-
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
   };
@@ -59,9 +57,9 @@ export default function ContactForm() {
             <div>
               <h3 className="font-semibold mb-1">Address</h3>
               <p className="text-sm text-gray-600">
-              Pinakin Building, Plot No.18/2, opposite IKEA, Sector-III, HUDA Techno Enclave, HITEC City, Hyderabad, Telangana 500081              </p>
-             
-              
+                Pinakin Building, Plot No.18/2, opposite IKEA, Sector-III, HUDA
+                Techno Enclave, HITEC City, Hyderabad, Telangana 500081{" "}
+              </p>
             </div>
           </div>
         </div>
