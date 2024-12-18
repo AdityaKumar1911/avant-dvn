@@ -238,3 +238,92 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+<div className="h-full flex flex-col">
+<div className="px-4 py-6 bg-gray-100" style={{ paddingTop: "13px" }}>
+  <div className="flex items-center justify-between">
+    <h2 className="text-lg font-semibold text-gray-900">Your Cart</h2>
+    <button
+      onClick={toggleCart}
+      className="text-gray-800 hover:text-gray-900 focus:outline-none"
+    >
+      <span className="sr-only">Close cart</span>
+      <svg
+        className="h-6 w-6"
+        stroke="currentColor"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<div className="flex-1 overflow-y-auto px-4 py-6">
+  {cartItems.length === 0 ? (
+    <p>Your cart is empty</p>
+  ) : (
+    <div className="space-y-4">
+      {cartItems.map((item) => (
+        <div key={item._id} className="flex items-center">
+          <img
+            src={`${process.env.REACT_APP_IMAGE_URL}/${item.productId.images[0]}`}
+            alt={item.productId.name}
+            className="w-16 h-16 object-cover rounded"
+          />
+          <div className="ml-4 flex-1">
+            <h3 className="text-sm font-medium text-gray-900">
+              {item.productId.name}
+            </h3>
+            <p className="text-sm text-gray-600">
+              Price: ₹{item.productId.price}
+            </p>
+            <p className="text-sm text-gray-600">
+              Quantity: {item.quantity}
+            </p>
+            <div className="flex items-center space-x-2">
+              {/* Decrement button */}
+              <button
+                onClick={() => decrementQuantity(item.productId._id)}
+                className="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600"
+              >
+                -
+              </button>
+              {/* Increment button */}
+              <button
+                onClick={() => incrementQuantity(item.productId._id)}
+                className="px-3 py-1 bg-green-500 text-white rounded-md hover:bg-green-600"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</div>
+
+<div className="px-4 py-6 bg-gray-100">
+  <div className="flex justify-between text-base font-medium text-gray-900 mb-4">
+    <p>Subtotal</p>
+    <p>₹{cartTotal.toLocaleString()}</p>
+  </div>
+
+  <button
+    onClick={handleCheckout}
+    className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700"
+  >
+    Checkout
+  </button>
+</div>
+</div>

@@ -18,8 +18,9 @@ export default function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(null);
   const [storedUser, setStoredUser] = useState(null);
 
-  const logIsLoggedIn = (value) => {
-    // console.log("isLoggedIn updated to:", value);
+  // Function to close the menu
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   useEffect(() => {
@@ -32,7 +33,6 @@ export default function Navbar() {
         ) {
           setIsLoggedIn(storedUserData.isLoggedIn);
           setStoredUser(storedUserData);
-          logIsLoggedIn();
           console.log("Stored User:", storedUserData);
           console.log("User Name:", storedUserData.name);
           if (storedUserData.isLoggedIn) {
@@ -205,15 +205,14 @@ export default function Navbar() {
         setIsUserMenuOpen(false);
       }
     };
-  
+
     document.addEventListener("mousedown", handleClickOutside);
-  
+
     // Cleanup listener
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isCartOpen, isUserMenuOpen]);
-  
 
   return (
     <>
@@ -235,7 +234,7 @@ export default function Navbar() {
           </button>
 
           <div className="absolute left-1/2 transform -translate-x-1/2">
-            <Link to="/" className="block">
+            <Link to="/" className="block" onClick={closeMenu}>
               <img src={Logo} alt="AVANT DIVINE" className="w-auto h-20" />
             </Link>
           </div>
@@ -303,29 +302,25 @@ export default function Navbar() {
               <Link
                 to="/"
                 className="block px-4 py-2 text-lg hover:bg-gray-100"
+                onClick={closeMenu} // Close menu on click
               >
                 Home
               </Link>
             </li>
             <li>
-              {/* <Link
-                to="/products"
-                className="block px-4 py-2 text-lg hover:bg-gray-100"
-              >
-                Products
-              </Link> */}
-            </li>
-            <li>
               <Link
                 to="/aboutus"
                 className="block px-4 py-2 text-lg hover:bg-gray-100"
+                onClick={closeMenu} // Close menu on click
               >
                 About Us
               </Link>
-
+            </li>
+            <li>
               <Link
                 to="/callus"
                 className="block px-4 py-2 text-lg hover:bg-gray-100"
+                onClick={closeMenu} // Close menu on click
               >
                 Contact
               </Link>
@@ -373,7 +368,7 @@ export default function Navbar() {
             ) : (
               <div className="space-y-4">
                 {cartItems.map((item) => (
-                  <div key={item._id} className="flex items-center">    
+                  <div key={item._id} className="flex items-center">
                     <img
                       src={`${process.env.REACT_APP_IMAGE_URL}/${item.productId.images[0]}`}
                       alt={item.productId.name}
