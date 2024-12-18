@@ -16,7 +16,7 @@ export default function ReelsSection() {
         name: "FashionGuru",
         avatar: "/placeholder.svg",
       },
-      isVideo: true, // Add a flag to differentiate videos
+      isVideo: true,
     },
     {
       id: 2,
@@ -54,16 +54,18 @@ export default function ReelsSection() {
   ];
 
   return (
-    <section className="bg-gray-100 py-12">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Trending Reels</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <section className="bg-gray-100 py-12 w-full">
+      <div className="container mx-auto px-4 w-full">
+        <h2 className="text-3xl font-bold mb-8 text-center">
+          Divine Spotlight
+        </h2>
+        <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {reels.map((reel) => (
             <div
               key={reel.id}
-              className="bg-white rounded-lg overflow-hidden shadow-md"
+              className="bg-white rounded-lg overflow-hidden shadow-md w-full"
             >
-              <div className="relative aspect-[9/16]">
+              <div className="relative aspect-[9/16] w-full">
                 {reel.isVideo ? (
                   <video
                     src={reel.thumbnail}
@@ -80,29 +82,35 @@ export default function ReelsSection() {
                     className="object-cover w-full h-full"
                   />
                 )}
-                {/* <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                  <PlayIcon className="w-16 h-16 text-white opacity-80" />
-                </div> */}
               </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-lg mb-2">{reel.title}</h3>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    <img
-                      src={reel.user.avatar}
-                      alt={reel.user.name}
-                      width={24}
-                      height={24}
-                      className="rounded-full"
-                    />
-                    <span className="text-sm text-gray-600">
-                      {reel.user.name}
-                    </span>
-                  </div>
-                  <span className="text-sm text-gray-500">
-                    {reel.views} views
-                  </span>
-                </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Horizontal scroll container for mobile view */}
+        <div className="flex sm:hidden overflow-x-scroll scrollbar-hide space-x-4">
+          {reels.map((reel) => (
+            <div
+              key={reel.id}
+              className="bg-white rounded-lg overflow-hidden shadow-md min-w-[80%] sm:min-w-0"
+            >
+              <div className="relative aspect-[9/16] w-full">
+                {reel.isVideo ? (
+                  <video
+                    src={reel.thumbnail}
+                    className="object-cover w-full h-full"
+                    controls={false}
+                    autoPlay
+                    muted
+                    loop
+                  ></video>
+                ) : (
+                  <img
+                    src={reel.thumbnail}
+                    alt={reel.title}
+                    className="object-cover w-full h-full"
+                  />
+                )}
               </div>
             </div>
           ))}

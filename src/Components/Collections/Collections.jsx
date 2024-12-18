@@ -1,11 +1,11 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import Collaction1 from "../../Assets/images/Avant Devine7960.jpg";
-import Collaction2 from "../../Assets/images/Avant Devine8161.jpg";
-import Collaction3 from "../../Assets/images/Avant Devine8496.jpg";
-import Collaction4 from "../../Assets/images/Avant Devine8535.jpg";
-import Collaction5 from "../../Assets/images/Avant Devine8658.jpg";
+import Collaction1 from "../../Assets/images/Avant-Devine7960.jpg";
+import Collaction2 from "../../Assets/images/Avant-Devine8161.jpg";
+import Collaction3 from "../../Assets/images/Avant-Devine8496.jpg";
+import Collaction4 from "../../Assets/images/Avant-Devine8535.jpg";
+import Collaction5 from "../../Assets/images/Avant-Devine8658.jpg";
 
 const collections = [
   {

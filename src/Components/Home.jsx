@@ -3,7 +3,7 @@ import Banner from "./Banner/Banner";
 import CollectionPage from "./Collections/TwoCollaction";
 import FashionShowcase from "./Collections/FashionShowcase";
 import VideoBanner from "./VideoBanner/VideoBanner";
-import ShopPageb from "./Shoppage/Shoppage";
+import ShopPageb from "./Collections/Shoppage";
 import OurNewArivals from "./OurNewArivals/OurNewArivals";
 import Reels from "./ReelsSections/Reels";
 import SlidingText from "./SlidingText/SlidingText";
@@ -17,12 +17,13 @@ const Home = () => {
       <Banner />
       <SlidingText />
       <CollectionPage />
+      <Reels />
       <FashionShowcase />
       <ProductBanner />
       <ShopPageb />
       <OurNewArivals />
-      <Reels />
-      <Footer />
+      {/* <Reels /> */}
+      {/* <Footer /> */}
     </div>
   );
 };

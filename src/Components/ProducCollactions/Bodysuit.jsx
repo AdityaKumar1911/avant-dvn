@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BodySuit1 from "../../Assets/images/Avant Devine7960.jpg";
+import BodySuit1 from "../../Assets/images/Avant-Devine7960.jpg";
 
 // Product list
 const products = [

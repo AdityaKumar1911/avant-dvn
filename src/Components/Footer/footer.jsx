@@ -1,133 +1,160 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  FaPinterest,
+  FaInstagram,
+  FaWhatsapp,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import AD from "../../Assets/images/AD.png";
 
 function Footer() {
   return (
-    <div className="bg-gray-800 text-white py-10">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* HELP Section */}
-          <div className="mt-3">
-            <p className="text-lg font-semibold">HELP</p>
-            <ul className="mt-4 space-y-2">
+    <div className="bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white py-10">
+      <div className="container mx-auto px-6 md:px-12">
+        {/* Footer Sections */}
+        <div className="flex flex-wrap justify-between  text-center md:text-left">
+          {/* Social Section */}
+          <div className="w-full md:w-1/4">
+            <p className="text-lg font-bold uppercase tracking-wide mb-4">
+              Avant
+            </p>
+            <ul className="space-y-3">
               <li>
-                <Link to="./CallUs" className="hover:underline">
-                  A Client Advisor is available at
-                  <br />
-                  You can also{" "}
-                  <Link to="#" className="underline">
-                    chat
-                  </Link>{" "}
-                  or{" "}
-                  <Link to="#" className="underline">
-                    email
-                  </Link>{" "}
-                  us
+                <a
+                  href="#shop"
+                  className="hover:text-gray-300 transition duration-200"
+                >
+                  Shop
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/aboutus"
+                  className="hover:text-gray-300 transition duration-200"
+                >
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#terms"
+                  className="hover:text-gray-300 transition duration-200"
+                >
+                  Terms of Service
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Info Section */}
+          <div className="w-full md:w-1/4">
+            <p className="text-lg font-bold uppercase tracking-wide mb-4">
+              Info
+            </p>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  to="/termsAndConditions"
+                  className="hover:text-gray-300 transition duration-200"
+                >
+                  TermsAndConditions
                 </Link>
               </li>
               <li>
-                <Link to="/help/faq" className="hover:underline">
-                  FAQ's
+                <Link
+                  to="/returnsandexchange"
+                  className="hover:text-gray-300 transition duration-200"
+                >
+                  Returns and Exchange
                 </Link>
               </li>
               <li>
-                <Link to="/help/shipping" className="hover:underline">
-                  Stores
+                <Link
+                  to="/shippinganddelivery"
+                  className="hover:text-gray-300 transition duration-200"
+                >
+                  Shipping & Delivery
                 </Link>
               </li>
               <li>
-                <Link to="/help/returns" className="hover:underline">
-                  Follow Us
+                <Link
+                  to="/privacyPolicy"
+                  className="hover:text-gray-300 transition duration-200"
+                >
+                  PrivacyPolicy
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* SERVICES Section */}
-          <div className="mt-3">
-            <p className="text-lg font-semibold">SERVICES</p>
-            <ul className="mt-4 space-y-2">
-              <li>
-                <Link to="/services/consulting" className="hover:underline">
-                  Repairs
-                </Link>
+          {/* Contact Section */}
+          <div className="w-full md:w-1/4">
+            <p className="text-lg font-bold uppercase tracking-wide mb-4">
+              Contact Us
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-center justify-center md:justify-start gap-2">
+                <a
+                  href="https://alvo.chat/5kc9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <FaWhatsapp /> WhatsApp
+                </a>
               </li>
-              <li>
-                <Link to="/services/design" className="hover:underline">
-                  Shipping
-                </Link>
+              <li className="flex items-center justify-center md:justify-start gap-2">
+                <a
+                  href="https://www.instagram.com/avantdivine/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <FaInstagram />
+                  Instagram
+                </a>
               </li>
-              <li>
-                <Link to="/services/design" className="hover:underline">
-                  Personalisation
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/marketing" className="hover:underline">
-                  Download our Apps
-                </Link>
+
+              <li className="flex items-center justify-center md:justify-start gap-2">
+                <a
+                  href="https://in.pinterest.com/avantdivine/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <FaPinterest /> {/* Pinterest icon */}
+                  Pinterest
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* ABOUT Section */}
-          <div className="mt-3">
-            <p className="text-lg font-semibold">ABOUT</p>
-            <ul className="mt-4 space-y-2">
-              <li>
-                <Link to="/about/careers" className="hover:underline">
-                  Blogs
-                </Link>
-              </li>
-              <li>
-                <Link to="/about/blog" className="hover:underline">
-                  Sustainability
-                </Link>
-              </li>
-              <li>
-                <Link to="/about/blog" className="hover:underline">
-                  Privacy And Policy
-                </Link>
-              </li>
-              <li>
-                <Link to="/about/blog" className="hover:underline">
-                  Terms And Conditions
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Address Section */}
+          <div className="w-full md:w-1/4">
+            <p className="text-lg font-bold uppercase tracking-wide mb-4">
+              Address
+            </p>
+            <p className="text-sm">
+              <a href="https://maps.app.goo.gl/rBZQpueCStXxkiup6?g_st=ic">
+                <FaMapMarkerAlt className="inline-block text-gray-300 mr-2" />
+                Pinakin Building, Plot No.18/2, opposite IKEA, Sector-III, HUDA
+                Techno Enclave, HITEC City, Hyderabad, Telangana 500081
+              </a>
+            </p>
 
-          {/* CONNECT Section */}
-          <div className="mt-3">
-            <p className="text-lg font-semibold">CONNECT</p>
-            <ul className="mt-4 space-y-2">
-              <li>
-                <Link to="/help/contact" className="hover:underline">
-                  <span className="underline">Sign up</span> for first access to
-                  latest collections,
-                  <br />
-                  campaigns and video
-                </Link>
-              </li>
-            </ul>
-            <p className="mt-6 text-lg font-semibold">ADDRESS</p>
-            <ul className="mt-4">
-              <li>
-                <Link className="text-white">
-                  35- Ferozeshah Road
-                  <br />
-                  New Delhi - 110001 <br />
-                  011-23604650
-                </Link>
-              </li>
-            </ul>
+            <p className="mt-3">Contact: 9000308811</p>
           </div>
         </div>
 
-       
-        <div className="flex justify-center mt-10">
-          <img src={AD} alt="Descriptive Alt Text" className="max-w-full" />
+        {/* Footer Bottom */}
+        <div className="mt-10 border-t border-gray-700 pt-6 text-center">
+          <div className="flex justify-center mb-4">
+            <img src={AD} alt="Advertisement" className="w-48" />
+          </div>
+          <p className="text-gray-500 text-sm">
+            &copy; {new Date().getFullYear()} Avant. All Rights Reserved.
+          </p>
         </div>
       </div>
     </div>

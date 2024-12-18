@@ -4,9 +4,21 @@ import "./SlidingText.css";
 const SlidingText = () => {
   return (
     <div className="sliding-container">
-      <div className="sliding-text">
-        - Lay's x Avant - It's more than just a snack - Lay's x Avant - It's
-        more than just a snack - Lay's x Avant- It's more than just a snack -
+      <div
+        className="sliding-text"
+        style={{ display: "flex", flexDirection: "row", gap: "40px" }}
+      >
+        <p> Unleash your inner icon with Avant Divine’s artistic couture.</p>{" "}
+        <br />
+        <p> Unleash your inner icon with Avant Divine’s artistic couture.</p>
+        <br />
+        <p> Unleash your inner icon with Avant Divine’s artistic couture.</p>
+        <br />
+        <p> Unleash your inner icon with Avant Divine’s artistic couture.</p>
+        <br />
+        <p> Unleash your inner icon with Avant Divine’s artistic couture.</p>
+        <br />
+        <p> Unleash your inner icon with Avant Divine’s artistic couture.</p>
       </div>
     </div>
   );
