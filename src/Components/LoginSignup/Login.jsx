@@ -61,12 +61,12 @@ export default function LoginPage() {
       {/* Illustration Section */}
       <div className="lg:w-1/2 p-8 flex items-center justify-center bg-purple-50">
         <div className="relative w-full max-w-md h-[400px]">
-          <img
+{/*           <img
             src="https://cdn.vectorstock.com/i/1000x1000/65/91/flat-design-banner-of-e-commerce-for-website-vector-14236591.webp"
             alt="Login illustration"
             className="object-contain"
             style={{ width: "100%", height: "400px" }}
-          />
+          /> */}
         </div>
       </div>
 
