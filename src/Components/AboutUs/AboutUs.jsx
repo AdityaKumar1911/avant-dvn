@@ -67,25 +67,6 @@ const AboutPage = () => {
         </p>
       </div>
 
-      <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
-        PRODUCT RANGE
-      </h2>
-      <h3 className="text-2xl md:text-3xl font-serif text-center mb-8">
-        MENSWEAR AND WOMENSWEAR
-      </h3>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {products.map((product, index) => (
-          <div key={index} className="space-y-4">
-            <h4 className="text-xl md:text-2xl font-semibold">
-              {product.name}
-            </h4>
-            <p className="text-gray-700" style={{ textAlign: "justify" }}>
-              {product.description}
-            </p>
-          </div>
-        ))}
-      </div>
     </div>
   );
 };

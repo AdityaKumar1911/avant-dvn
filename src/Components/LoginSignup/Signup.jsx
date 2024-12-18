@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import Loginimg from "../../Assets/images/login.png";
 export default function SignupPage() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -39,8 +39,7 @@ export default function SignupPage() {
 
     try {
       const response = await axios.post(
-        "http://195.35.45.224:5000/api/auth/signup", // Adjust with your API endpoint
-        formData
+        `${process.env.REACT_APP_API_URL}/auth/signup`,
       );
       setIsSubmitting(false);
       setIsOtpVisible(true); // Show OTP box after successful signup
@@ -58,7 +57,7 @@ export default function SignupPage() {
 
     try {
       const response = await axios.post(
-        "http://195.35.45.224:5000/api/auth/verify-otp", // Adjust with your API endpoint
+        `${process.env.REACT_APP_API_URL}/auth/verify-otp`, 
         { email: formData.email, otp }
       );
 
@@ -89,7 +88,7 @@ export default function SignupPage() {
       <div className="lg:w-1/2 p-8 flex items-center justify-center bg-purple-50">
         <div className="relative w-full max-w-md" style={{ height: "400px" }}>
           <img
-            src="https://cdn.vectorstock.com/i/1000x1000/65/91/flat-design-banner-of-e-commerce-for-website-vector-14236591.webp"
+          src={Loginimg }
             alt="Signup illustration"
             className="object-contain"
             style={{ width: "100%", height: "100%" }}
@@ -102,7 +101,7 @@ export default function SignupPage() {
         <div className="w-full max-w-md space-y-8">
           {/* Logo and Welcome Text */}
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-purple-600 mb-2">
+            <h1 className="text-2xl font-bold  mb-2" style={{color: "#40565e"}}>
               Avant Divine
             </h1>
             <p className="text-gray-600">

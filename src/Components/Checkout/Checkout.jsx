@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Trash2 } from "lucide-react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useLoader } from "../Loader/Loader";
 
 const CheckoutPage = () => {
   const navigate = useNavigate();
+  const { startLoader, stopLoader } = useLoader();
 
   const [cartItems, setCartItems] = useState([]);
   const [subtotal, setSubtotal] = useState(0);
@@ -76,7 +78,7 @@ const CheckoutPage = () => {
       const item = cartItems.find((item) => item.productId._id === itemId);
       const updatedQuantity = item.quantity + 1;
       const response = await fetch(
-        `http://195.35.45.224:5000/api/cart/update/${item.productId._id}`,
+        `${process.env.REACT_APP_API_URL}/cart/update/${item.productId._id}`,
         {
           method: "PUT",
           headers: {
@@ -114,7 +116,7 @@ const CheckoutPage = () => {
       if (item.quantity > 1) {
         const updatedQuantity = item.quantity - 1;
         const response = await fetch(
-          `http://195.35.45.224:5000/api/cart/update/${item.productId._id}`,
+          `${process.env.REACT_APP_API_URL}/cart/update/${item.productId._id}`,
           {
             method: "PUT",
             headers: {
@@ -151,7 +153,7 @@ const CheckoutPage = () => {
   const checkPaymentStatus = async (transactionId) => {
     try {
       // Construct the status API URL with the transaction ID
-      const statusApiUrl = `http://195.35.45.224:5000/api/payment/status?id=${transactionId}`;
+      const statusApiUrl = `${process.env.REACT_APP_API_URL}/payment/status?id=${transactionId}`;
 
       // Make the API call to check payment status
       const response = await axios.get(statusApiUrl);
@@ -169,8 +171,6 @@ const CheckoutPage = () => {
     }
   };
 
-  // Main function to handle payment initiation and status check
-
   // Function to handle payment initiation based on selected method
   const initiateOrder = async () => {
     console.log("Clicked");
@@ -186,15 +186,17 @@ const CheckoutPage = () => {
   // Main function to handle payment initiation and status check
   const initiateCOD = async () => {
     console.log("Initiating Cash on Delivery...");
-    navigate("/successfulpayment");
-  };
+    startLoader();
 
+    // Simulate a 3-second delay
+    setTimeout(() => {
+      stopLoader();
+      navigate("/successfulpayment");
+    }, 3000);
+  };
   // Main function to handle payment initiation and status check
   const initiatePhonePayPayment = async () => {
-    // Retrieve user data from localStorage
     const storedUserData = JSON.parse(localStorage.getItem("user"));
-
-    // Validate address fields
     if (
       !address.fullName.trim() ||
       !address.phone.trim() ||
@@ -240,7 +242,7 @@ const CheckoutPage = () => {
 
       // Make the API call to create an order
       const response = await axios.post(
-        "http://195.35.45.224:5000/api/payment/create-order",
+        `${process.env.REACT_APP_API_URL}/payment/create-order`,
         requestData,
         {
           headers: {

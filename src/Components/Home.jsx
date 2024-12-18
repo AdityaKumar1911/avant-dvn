@@ -17,7 +17,7 @@ const Home = () => {
       <Banner />
       <SlidingText />
       <CollectionPage />
-      <Reels />
+      {/* <Reels /> */}
       <FashionShowcase />
       <ProductBanner />
       <ShopPageb />

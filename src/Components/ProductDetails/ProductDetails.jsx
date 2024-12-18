@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Sizegide from "../../Assets/images/sizeguide.png";
+import { useLoader } from "../Loader/Loader";
+
 
 export default function ProductDetails() {
   const { productId } = useParams(); // Get the productId from the URL
@@ -10,6 +12,7 @@ export default function ProductDetails() {
   const [quantity, setQuantity] = useState(1);
   const [activeTab, setActiveTab] = useState("PRODUCT INFORMATION");
   const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false); // State for popup visibility
+  const { startLoader, stopLoader } = useLoader();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -65,12 +68,16 @@ export default function ProductDetails() {
       return;
     }
 
+    // Start the loader
+    startLoader();
+
     try {
       // Retrieve user data from local storage
       const storedUserData = JSON.parse(localStorage.getItem("user"));
 
       if (!storedUserData || !storedUserData._id) {
         window.location.href = "/login"; // Redirects to the login page
+        stopLoader(); // Stop the loader if user is not logged in
         return;
       }
 
@@ -94,7 +101,7 @@ export default function ProductDetails() {
       );
 
       if (response.ok) {
-        alert("Your item has been successfully added to the cart!");
+        console.log("Your item has been successfully added to the cart!");
       } else {
         const errorData = await response.json();
         alert(`Error adding item to the cart: ${errorData.message}`);
@@ -102,6 +109,9 @@ export default function ProductDetails() {
     } catch (error) {
       console.error("Error adding item to cart:", error);
       alert("An error occurred while adding the item to the cart.");
+    } finally {
+      // Stop the loader after the API request (whether success or failure)
+      stopLoader();
     }
   };
 

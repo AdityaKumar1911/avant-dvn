@@ -14,6 +14,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   const cartRef = useRef(null);
   const userMenuRef = useRef(null);
+  const menuRef = useRef(null); // Ref for the hamburger menu
   const [isLoggedIn, setIsLoggedIn] = useState(null);
   const [storedUser, setStoredUser] = useState(null);
 
@@ -129,7 +130,7 @@ export default function Navbar() {
 
     try {
       const response = await axios.put(
-        `http://195.35.45.224:5000/api/cart/update/${productId}`,
+        `${process.env.REACT_APP_API_URL}/cart/update/${productId}`,
         { quantity: updatedQuantity }
       );
       if (response.data.status) {
@@ -161,7 +162,7 @@ export default function Navbar() {
 
       try {
         const response = await axios.put(
-          `http://195.35.45.224:5000/api/cart/update/${productId}`,
+          `${process.env.REACT_APP_API_URL}/cart/update/${productId}`,
           { quantity: updatedQuantity }
         );
         if (response.data.status) {
@@ -186,6 +187,34 @@ export default function Navbar() {
     }
   };
 
+  // Close menus if click outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        cartRef.current &&
+        !cartRef.current.contains(event.target) &&
+        isCartOpen
+      ) {
+        setIsCartOpen(false);
+      }
+      if (
+        userMenuRef.current &&
+        !userMenuRef.current.contains(event.target) &&
+        isUserMenuOpen
+      ) {
+        setIsUserMenuOpen(false);
+      }
+    };
+  
+    document.addEventListener("mousedown", handleClickOutside);
+  
+    // Cleanup listener
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isCartOpen, isUserMenuOpen]);
+  
+
   return (
     <>
       <div className="h-[64px] w-full"></div>
@@ -193,6 +222,7 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50 h-[64px]">
         <div className="flex items-center justify-between px-4 py-4 h-full">
           <button
+            ref={menuRef} // Added ref for hamburger menu
             className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             onClick={toggleMenu}
@@ -278,24 +308,23 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link
+              {/* <Link
                 to="/products"
                 className="block px-4 py-2 text-lg hover:bg-gray-100"
               >
                 Products
-              </Link>
+              </Link> */}
             </li>
             <li>
               <Link
-                to="/about"
+                to="/aboutus"
                 className="block px-4 py-2 text-lg hover:bg-gray-100"
               >
                 About Us
               </Link>
-            </li>
-            <li>
+
               <Link
-                to="/contact"
+                to="/callus"
                 className="block px-4 py-2 text-lg hover:bg-gray-100"
               >
                 Contact
@@ -344,7 +373,7 @@ export default function Navbar() {
             ) : (
               <div className="space-y-4">
                 {cartItems.map((item) => (
-                  <div key={item._id} className="flex items-center">
+                  <div key={item._id} className="flex items-center">    
                     <img
                       src={`${process.env.REACT_APP_IMAGE_URL}/${item.productId.images[0]}`}
                       alt={item.productId.name}

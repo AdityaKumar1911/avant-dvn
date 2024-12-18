@@ -1,49 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Bodysuit from "../../Assets/images/Avant-Devine7960.jpg";
-import Roseimg from "../../Assets/images/Avant-Devine8325.jpg";
-import Chromepulsejeans from "../../Assets/images/Avant-Devine8535.jpg";
-import Wave from "../../Assets/images/Avant-Devine8988.jpg";
-import Fadedecho from "../../Assets/images/Avant-Devine8797.jpg";
 
 const NewArrivals = () => {
-  const bodysuitProductId = "6760760a6de32005e732d499";
-
-  const products = [
-    {
-      name: "Scarlet Seduction bodysuit",
-      price: 4700.0, // Updated price
-      image: Bodysuit,
-      link: "", // Add a unique link for each product
-    },
-    {
-      name: "Rose Noir Tee Shirt",
-      price: 4999.0, // Updated price
-      image: Roseimg,
-      link: "", // Add a unique link for each product
-    },
-    {
-      name: "Chrome Pulse Jeans",
-      price: 9500.0, // Updated price
-      image: Chromepulsejeans,
-      link: "#", // Add a unique link for each product
-    },
-    {
-      name: "Wave co ord",
-      price: 11000.0, // Updated price
-      image: Wave,
-      link: "#", // Add a unique link for each product
-    },
-    {
-      name: "Faded echo",
-      price: 4499.0, // Updated price
-      image: Fadedecho,
-      link: "#", // Add a unique link for each product
-    },
-    // Add more products if needed
-  ];
-
+  const [products, setProducts] = useState([]); // State to store fetched products
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Fetch products from the API
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(process.env.REACT_APP_API_URL + "/products/all");
+        const data = await response.json();
+
+        if (data && Array.isArray(data)) {
+          // Map API response to the desired format
+          const formattedProducts = data.map((item) => ({
+            id: item._id,
+            name: item.name,
+            price: item.price,
+            image: process.env.REACT_APP_IMAGE_URL + "/" + item.images[0],
+          }));
+          setProducts(formattedProducts);
+        }
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   // Function to handle the next button click
   const handleNext = () => {
@@ -63,16 +48,10 @@ const NewArrivals = () => {
   const displayedProducts = products.slice(currentIndex, currentIndex + 4);
 
   return (
-    <section
-      className="container mx-auto px-4 py-12"
-      style={{ overflow: "hidden" }}
-    >
+    <section className="container mx-auto px-4 py-12" style={{ overflow: "hidden" }}>
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-2xl md:text-3xl font-serif">OUR NEW ARRIVALS</h2>
-        <Link
-          to="#"
-          className="text-sm uppercase tracking-wider hover:underline"
-        >
+        <Link to="#" className="text-sm uppercase tracking-wider hover:underline">
           VIEW ALL PRODUCTS
         </Link>
       </div>
@@ -103,7 +82,7 @@ const NewArrivals = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {displayedProducts.map((product, index) => (
             <div key={index} className="group">
-              <Link to={product.link} className="block">
+              <Link to={`/product-details/${product.id}`} className="block">
                 <div className="relative aspect-[3/4] mb-4 overflow-hidden">
                   <img
                     src={product.image}
@@ -112,7 +91,6 @@ const NewArrivals = () => {
                   />
                 </div>
                 <h3 className="text-lg font-medium mb-2">{product.name}</h3>
-                {/* Price display with 'k' format */}
                 <p className="text-gray-600">
                   <span className="font-semibold">₹ </span>
                   {product.price.toFixed(2)}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Loginimg from "../../Assets/images/login.png";
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -61,12 +62,12 @@ export default function LoginPage() {
       {/* Illustration Section */}
       <div className="lg:w-1/2 p-8 flex items-center justify-center bg-purple-50">
         <div className="relative w-full max-w-md h-[400px]">
-{/*           <img
-            src="https://cdn.vectorstock.com/i/1000x1000/65/91/flat-design-banner-of-e-commerce-for-website-vector-14236591.webp"
+          <img
+            src={Loginimg}
             alt="Login illustration"
             className="object-contain"
             style={{ width: "100%", height: "400px" }}
-          /> */}
+          />
         </div>
       </div>
 
@@ -75,7 +76,7 @@ export default function LoginPage() {
         <div className="w-full max-w-md space-y-8">
           {/* Logo and Welcome Text */}
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-purple-600 mb-2">
+            <h1 className="text-2xl font-bold  mb-2" style={{color: "#40565e"}}>
               Avant Divine
             </h1>
             <p className="text-gray-600">

@@ -3,6 +3,20 @@
     monospace;
 } */
 
+/* @font-face {
+  font-family: "Outer Sans Alt Light";
+  src: url("/src//Assets/Font/made_outer_sans/MADE Outer Sans Alt Light PERSONAL USE.otf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* @font-face {
+  font-family: "Futura Regular";
+  src: url("/src//Assets/Font/futura/FUTURA55REGULAR.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+} */
 @font-face {
   font-family: "Futura Medium";
   src: url("/src//Assets/Font/futura/FUTURA65MEDIUM.TTF") format("truetype");
@@ -16,7 +30,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 /* Default font for body */
 body {
   margin: 0;
@@ -30,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Futura Medium", sans-serif;
+  font-family: "Outer Sans Alt Light", sans-serif;
 }
 
 @tailwind base;

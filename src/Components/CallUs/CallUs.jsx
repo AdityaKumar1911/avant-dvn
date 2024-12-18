@@ -57,11 +57,9 @@ export default function ContactForm() {
             <div>
               <h3 className="font-semibold mb-1">Address</h3>
               <p className="text-sm text-gray-600">
-                Pinakin Building, Plot No.18/2, opposite IKEA, Sector-III, HUDA Techno Enclave, HITEC City, Hyderabad, Telangana 500081
-              </p>
-{/*               <p className="text-sm text-gray-600">
-                Executive Plaza, New Delhi 110008
-              </p> */}
+              Pinakin Building, Plot No.18/2, opposite IKEA, Sector-III, HUDA Techno Enclave, HITEC City, Hyderabad, Telangana 500081              </p>
+             
+              
             </div>
           </div>
         </div>
@@ -86,7 +84,7 @@ export default function ContactForm() {
             </div>
             <div>
               <h3 className="font-semibold mb-1">Customer Care</h3>
-              <p className="text-sm text-gray-600">9000308811</p>
+              <p className="text-sm text-gray-600">+91 9000308811</p>
             </div>
           </div>
         </div>
@@ -136,7 +134,7 @@ export default function ContactForm() {
             </div>
             <div>
               <h3 className="font-semibold mb-1">Email</h3>
-              <p className="text-sm text-gray-600">info@example.com</p>
+              <p className="text-sm text-gray-600">contact@avantdivine.com</p>
             </div>
           </div>
         </div>
