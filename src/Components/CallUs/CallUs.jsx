@@ -8,7 +8,9 @@ export default function ContactForm() {
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) => 
+    // console.log("test")
+
     e.preventDefault();
     console.log("Form submitted:", formData);
   };
